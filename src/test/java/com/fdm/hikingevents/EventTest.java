@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.inOrder;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -65,34 +66,25 @@ public class EventTest {
 	
 	@Test
 	public void on_update_gets_managed_entity_and_sets_new_id() {
-		when(emf.createEntityManager()).thenReturn(manager);
-		when(manager.getTransaction()).thenReturn(transaction);
-		Event event= mock(Event.class);
-		Event found= mock(Event.class);
-		when(event.getId()).thenReturn(5);
-		when(manager.find(Event.class,5)).thenReturn(found);
 		
-		dao.update(event);
-	
-		InOrder order= inOrder(manager,transaction,emf,found);
-		order.verify(emf).createEntityManager();
-		order.verify(manager).getTransaction();
-		order.verify(transaction).begin();
-		order.verify(manager).find(Event.class, 5);
-		order.verify(found).update(event);
-		order.verify(manager).close();
+		Event event1= new Event();
+		Event event2= new Event();
+		event1.setEventName("Pizza eating");
+		event1.setCost(20.0);
+		event1.setEid(5);
+		event1.setStartDate("1/1/2010");
+		assertEquals("Pizza eating",event1.getEventName());
+		
+		event2.setEventName("swimming");
+		event2.setCost(50.0);
+		event2.setStartDate("2/2/2020");
+
+		event1.update(event2);
+		
+		assertEquals("swimming",event1.getEventName());
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+		
+		
+
 
 }

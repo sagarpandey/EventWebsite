@@ -29,18 +29,6 @@ public class Event implements Persistable<Event> {
 	@ManyToMany(mappedBy = "eventsToParticipate")
     Set<Participant> eventParticipant;
 	
-	
-
-//
-//	public Event(int eId, String eventName, String startDate, String endDate, double cost, Location location) {
-//		this.eId = eId;
-//		this.eventName = eventName;
-//		this.startDate = startDate;
-//		this.endDate = endDate;
-//		this.cost = cost;
-//		this.location = location;
-//	}
-
 	public Event() {};
 	public Event(int eId, String eventName, String startDate, String endDate, double cost,
 			Set<Participant> eventParticipant, Location location) {
@@ -72,6 +60,7 @@ public class Event implements Persistable<Event> {
 	public String getStartDate() {
 		return startDate;
 	}
+
 
 
 	public void setStartDate(String startDate) {
@@ -133,6 +122,8 @@ public class Event implements Persistable<Event> {
 		this.startDate=persistable.startDate;
 		this.endDate=persistable.endDate;
 		this.cost=persistable.cost;
+		this.eventName=persistable.eventName;
+
 		
 		
 	}

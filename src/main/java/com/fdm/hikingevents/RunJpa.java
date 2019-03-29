@@ -37,7 +37,7 @@ public class RunJpa {
 		dao.add(event5);
 		dao.add(event6);
 		
-		
+	System.out.println(dao4.getAll());
 		
 		
 		

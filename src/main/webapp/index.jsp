@@ -24,20 +24,23 @@
   
   <p>Lets discover the fantastic events that you like!!</p> 
 </div>
-    
+    <div>
+    Log in to continue
+    <br>
     <form>
   <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+    <label for="exampleInputEmail1"></label>
+    <input type="email"  id="exampleInputEmail1" placeholder="Email">
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    <label for="exampleInputPassword1"></label>
+    <input type="password"  id="exampleInputPassword1" placeholder="Password">
   </div>
  <div class="col-sm-offset-2 col-sm-10">
       <button type="submit" class="btn btn-default">Sign in</button>
     </div>
 </form>
+</div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
