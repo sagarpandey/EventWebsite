@@ -39,23 +39,6 @@ public class RunJpa {
 		
 	System.out.println(dao4.getAll());
 		
-		
-		
-		
-//		GenericDao<Participant> dao1= new GenericDao<>(emf,Participant.class);
-//		Participant participant= new Participant(0, null, null);
-//		participant.setPid(1);
-//		participant.setFirstName("Sagar");
-//		participant.setLastName("Pandey");
-//		dao1.add(participant);
-//		
-//		GenericDao<ParticipantInfo> dao5= new GenericDao<>(emf,ParticipantInfo.class);
-//		ParticipantInfo participantInfo= new ParticipantInfo();
-//		participantInfo.setpInfoid(1);
-//		participantInfo.setAddress("Melbourne");
-//		participantInfo.setDesignation("Hiker");
-//		dao5.add(participantInfo);
-//		
 
 
 	}
